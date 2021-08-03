@@ -1,0 +1,4 @@
+while read p; do
+  final=$(echo $p | rev | cut -d '/' -f 1 | rev)
+  wget "${p}/${final}_protein.faa.gz"
+done <lista-links.txt
